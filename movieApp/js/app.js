@@ -5,7 +5,7 @@
 angular.module('movieApp',['ui.router','ngResource','movieApp.controllers','movieApp.services']);
 
 angular.module('movieApp').config(function($stateProvider,$httpProvider){
-    $stateProvider.state('movies',{
+    $stateProvider.state('movies1',{
         url:'/movies1',
         templateUrl:'partials/movies.html',
         controller:'MovieListController'
@@ -23,5 +23,5 @@ angular.module('movieApp').config(function($stateProvider,$httpProvider){
         controller:'MovieEditController'
     });
 }).run(function($state){
-   $state.go('movies');
+   $state.go('movies1');
 });
