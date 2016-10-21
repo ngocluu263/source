@@ -10,6 +10,6 @@ var movieSchema=new Schema({
     releaseYear:'String',
     director:'String',
     genre:'String'
-}, {collection: 'movies_list'});
+}, {collection: 'cdrone_luutest'});
 
 module.exports=mongoose.model('Movie',movieSchema);
