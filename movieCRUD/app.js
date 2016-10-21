@@ -6,7 +6,7 @@
 
 var express = require('express');
 var bodyParser = require('body-parser');
-var movies = require('./routes/movies');
+var movies2 = require('./routes/movies');
 var mongoose = require('mongoose');
 
 var app = express();
@@ -32,6 +32,6 @@ app.use(allowCors);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
 
-app.use('/api', movies);
+app.use('/api', movies2);
 
 module.exports = app;
