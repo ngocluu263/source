@@ -5,23 +5,23 @@
 angular.module('movieApp',['ui.router','ngResource','movieApp.controllers','movieApp.services']);
 
 angular.module('movieApp').config(function($stateProvider,$httpProvider){
-    $stateProvider.state('movies1',{
-        url:'/movies1',
+    $stateProvider.state('movies',{
+        url:'/movies',
         templateUrl:'partials/movies.html',
         controller:'MovieListController'
     }).state('viewMovie',{
-       url:'/movies1/:id/view',
+       url:'/movies/:id/view',
        templateUrl:'partials/movie-view.html',
        controller:'MovieViewController'
     }).state('newMovie',{
-        url:'/movies1/new',
+        url:'/movies/new',
         templateUrl:'partials/movie-add.html',
         controller:'MovieCreateController'
     }).state('editMovie',{
-        url:'/movies1/:id/edit',
+        url:'/movies/:id/edit',
         templateUrl:'partials/movie-edit.html',
         controller:'MovieEditController'
     });
 }).run(function($state){
-   $state.go('movies1');
+   $state.go('movies');
 });

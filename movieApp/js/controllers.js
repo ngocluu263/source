@@ -3,7 +3,7 @@
  */
 angular.module('movieApp.controllers',[]).controller('MovieListController',function($scope,$state,popupService,$window,Movie){
 
-    $scope.movies1=Movie.query();
+    $scope.movies=Movie.query();
 
     $scope.deleteMovie=function(movie){
         if(popupService.showPopup('Really delete this?')){
@@ -23,7 +23,7 @@ angular.module('movieApp.controllers',[]).controller('MovieListController',funct
 
     $scope.addMovie=function(){
         $scope.movie.$save(function(){
-            $state.go('movies1');
+            $state.go('movies');
         });
     }
 
@@ -31,7 +31,7 @@ angular.module('movieApp.controllers',[]).controller('MovieListController',funct
 
     $scope.updateMovie=function(){
         $scope.movie.$update(function(){
-            $state.go('movies1');
+            $state.go('movies');
         });
     };
 
