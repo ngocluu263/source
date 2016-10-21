@@ -16,7 +16,7 @@ var app = express();
 
 var dbName='movieDB';
 
-var connectionString=('mongodb://stdev:stdev@localhost:27017/'+dbName , {auth:{authdb:"admin"}});;
+var connectionString='mongodb://stdev:stdev@localhost:27017/'+dbName + ',{auth:{authdb:"admin"}}';
 
 mongoose.connect(connectionString);
 
