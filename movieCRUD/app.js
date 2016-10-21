@@ -6,7 +6,7 @@
 
 var express = require('express');
 var bodyParser = require('body-parser');
-var movies2 = require('./routes/movies');
+var movies2 = require('./routes/movies2');
 var mongoose = require('mongoose');
 
 var app = express();
