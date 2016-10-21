@@ -9,7 +9,7 @@ var express=require('express');
 
 var router=express.Router();
 
-router.route('/movies')
+router.route('/movies1')
     .get(function(req,res){
        Movie.find(function(err,movies1){
            if(err)
@@ -27,7 +27,7 @@ router.route('/movies')
         });
     });
 
-router.route('/movies/:id')
+router.route('/movies1/:id')
     .put(function(req,res){
         Movie.findOne({_id:req.params.id},function(err,movie){
 
