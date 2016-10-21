@@ -14,7 +14,7 @@ var app = express();
 //connect to our database
 //Ideally you will obtain DB details from a config file
 
-var dbName='movieDB';
+var dbName='cDrone';
 
 var connectionString='mongodb://stdev:stdev@172.16.4.106:27017/'+dbName ;
 mongoose.connect(connectionString,{auth:{authdb:"admin"}});
