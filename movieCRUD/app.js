@@ -16,9 +16,9 @@ var app = express();
 
 var dbName='movieDB';
 
-var connectionString='mongodb://stdev:stdev@localhost:27017/'+dbName + ',{auth:{authdb:"admin"}}';
+//var connectionString='mongodb://stdev:stdev@localhost:27017/'+dbName + ',{auth:{authdb:"admin"}}';
 
-mongoose.connect(connectionString);
+mongoose.connect("mongodb://stdev:stdev@localhost:27017/myfirstdb" ,{auth:{authdb:"admin"}});
 
  allowCors = function(req, res, next) {
 res.header('Access-Control-Allow-Origin', '*');
