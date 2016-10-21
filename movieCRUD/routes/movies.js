@@ -11,10 +11,10 @@ var router=express.Router();
 
 router.route('/movies')
     .get(function(req,res){
-       Movie.find(function(err,movies){
+       Movie.find(function(err,movies1){
            if(err)
                 res.send(err);
-           res.json(movies);
+           res.json(movies1);
        });
     })
 
