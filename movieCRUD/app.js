@@ -6,7 +6,7 @@
 
 var express = require('express');
 var bodyParser = require('body-parser');
-var movies2 = require('./routes/movies2');
+var movies = require('./routes/movies');
 var mongoose = require('mongoose');
 
 var app = express();
@@ -20,18 +20,9 @@ var connectionString='mongodb://localhost:27017/'+dbName;
 
 mongoose.connect(connectionString);
 
- allowCors = function(req, res, next) {
-res.header('Access-Control-Allow-Origin', '*');
-res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
-res.header('Access-Control-Allow-Headers', 'Content-Type');
-res.header('Access-Control-Allow-Credentials', 'true');
-next();
-};
-
-app.use(allowCors);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
 
-app.use('/api', movies2);
+app.use('/api', movies);
 
 module.exports = app;
