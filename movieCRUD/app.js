@@ -16,9 +16,11 @@ var app = express();
 
 var dbName='cDrone';
 
-var connectionString='mongodb://stdev:stdev@172.16.4.106:27017/'+dbName ;
-mongoose.connect(connectionString,{auth:{authdb:"admin"}});
+//var connectionString='mongodb://stdev:stdev@localhost:27017/'+dbName ;
+//mongoose.connect(connectionString,{auth:{authdb:"admin"}});
 
+var connectionString='mongodb://localhost:27017/'+dbName ;
+mongoose.connect(connectionString);
 
  allowCors = function(req, res, next) {
 res.header('Access-Control-Allow-Origin', '*');
